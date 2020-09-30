@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Mail_App</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter">Enter</string>
+    <string name="registration">Registration</string>
+    <string name="family_name">Family Name</string>
+    <string name="name">Name</string>
+    <string name="wright_latter">Wright Latter</string>
+    <string name="send">Send</string>
+    <string name="enter_your_text">enter your text</string>
+    <string name="receiver">receiver</string>
+    <string name="title">title</string>
+    <string name="latters">latters</string>
+    <string name="delete">delete</string>
+    <string name="menu">menu</string>
+    <string name="sended">Sended</string>
+    <string name="delated">Delated</string>
+</resources>

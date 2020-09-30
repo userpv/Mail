@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BoxLetters">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_latters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="back_to_latters"
+                android:text="@string/latters" />
+
+            <Button
+                android:id="@+id/btn_sended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="to_sended_latters"
+                android:text="@string/sended" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:onClick="to_deleted_latters"
+                android:text="@string/delated"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.115"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_wright_letter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="wright_Latter"
+                android:text="@string/wright_latter" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/view_latter"
+            android:layout_width="401dp"
+            android:layout_height="575dp"
+            android:layout_marginTop="140dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="92dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="delete"
+            android:text="@string/delete"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/title_latter_filde"
+            app:layout_constraintEnd_toStartOf="@+id/btn_menu"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/sender_filde"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/title_latter_filde"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ListView
+            android:id="@+id/Latters_List"
+            android:layout_width="397dp"
+            android:layout_height="568dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/view_latter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_latter_filde"
+            tools:visibility="visible">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/title_latter_filde"
+            android:layout_width="387dp"
+            android:layout_height="65dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/view_latter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.853" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="to_menu"
+            android:text="@string/menu"
+            app:layout_constraintBottom_toTopOf="@+id/title_latter_filde"
+            app:layout_constraintEnd_toStartOf="@+id/sender_filde"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.875" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
